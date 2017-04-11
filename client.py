@@ -160,10 +160,21 @@ if __name__ == "__main__":
             message1 = receive_message(sock)
             print message1
             sock.close()
-        elif input==2:
+        #elif input==2:
           #TODO Store <username> <session cookie>
           #connect socket   Jonathan
           #Jonathan
+        elif  input == 2:
+          sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+          sock.connect((host, port))
+          message = " ".join(["STORE",username,session_cookie])
+          message_enc = bytearray(message, encoding="utf-8")
+          sock.send(message_enc)
+          print("Message sent")
+          response = receive_message(sock)
+          print(response)
+          sock.close()
+          
         elif input==3:
           #use existing username COUNT
            #connect
