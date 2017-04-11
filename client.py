@@ -161,6 +161,18 @@ if __name__ == "__main__":
             print message1
             sock.close()
         elif input==2:
+          #TODO Store <username> <session cookie>
+          #connect socket   Jonathan
+          #Jonathan
+        elif input==3:
+          #use existing username COUNT
+           #connect
+          #user_input = " ".join(["COUNT", username, session_cookie]) #count daryl 234398545646895
+          #user_in = bytearray(user_input, encoding="utf-8")
+          #sock.send(user_in)
+          #count <username> session
+          
+        
 
       else:
         print session_cookie
